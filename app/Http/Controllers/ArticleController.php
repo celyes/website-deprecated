@@ -70,7 +70,9 @@ class ArticleController extends Controller
      */
     public function edit($id)
     {
-        //
+        $article = article::findOrFail($id);
+        return $article;
+        // return view('edit_article',compact('article'));
     }
 
     /**
