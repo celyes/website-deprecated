@@ -19,8 +19,8 @@ class CreateArticlesTable extends Migration
             $table->string('body');
             $table->string('photo_principal');
             $table->string('another_photo');
-            $table->int('view');
-            $table->int('vote');
+            $table->integer('view');
+            $table->integer('vote');
             $table->string('keyword');
             $table->timestamps();
         });

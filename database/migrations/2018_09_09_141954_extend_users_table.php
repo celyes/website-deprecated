@@ -23,7 +23,7 @@ class ExtendUsersTable extends Migration
             $table->string('description');
             $table->string('study_level');
             $table->string('job');
-            $table->int('votes');
+            $table->integer('votes');
             $table->date('birth_date');
         });
     }
