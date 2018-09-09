@@ -17,7 +17,7 @@ class CreateCommentsTable extends Migration
             $table->increments('id');
             $table->string('comment');
             $table->string('author');
-            $table->sting('email');
+            $table->string('email');
             $table->timestamps();
         });
     }
