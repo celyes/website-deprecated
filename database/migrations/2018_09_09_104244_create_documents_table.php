@@ -18,9 +18,9 @@ class CreateDocumentsTable extends Migration
             $table->string('title_doc');
             $table->string('description_doc');
             $table->string('document_doc');
-            $table->int('downloads_doc');
-            $table->int('reads_doc');
-            $table->int('likes');
+            $table->integer('downloads_doc');
+            $table->integer('reads_doc');
+            $table->integer('likes');
             $table->string('cover_photo');
             $table->timestamps();
         });
