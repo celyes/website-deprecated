@@ -14,7 +14,14 @@ class CreateDocumentsTable extends Migration
     public function up()
     {
         Schema::create('documents', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('id_doc');
+            $table->string('title_doc');
+            $table->string('description_doc');
+            $table->string('document_doc');
+            $table->int('downloads_doc');
+            $table->int('reads_doc');
+            $table->int('likes');
+            $table->string('cover_photo');
             $table->timestamps();
         });
     }
