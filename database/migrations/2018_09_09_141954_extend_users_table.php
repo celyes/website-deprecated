@@ -14,6 +14,18 @@ class ExtendUsersTable extends Migration
     public function up()
     {
         //
+        Schema::create('users', function(Blueprint $table){
+            $table->string('username');
+            $table->string('image');
+            $table->string('github');
+            $table->string('youtube');
+            $table->string('facebook');
+            $table->string('description');
+            $table->string('study_level');
+            $table->string('job');
+            $table->int('votes');
+            $table->date('birth_date');
+        });
     }
 
     /**
