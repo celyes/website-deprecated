@@ -84,7 +84,16 @@ class ArticleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $article = article::findOrFail($id);
+        $article->title = $request->title;
+        $article->body = $request->body;
+        $article->photo_principal = $request->photo_principal;
+        $article->another_photo = $request->another_photo;
+        $article->view = $request->view;
+        $article->vote = $request->vote;
+        $article->keyword = $request->keyword;
+        $article->save();
+        return back();
     }
 
     /**
