@@ -37,4 +37,11 @@ class Article extends Model
     {
         return $this->where('keyword', $title)->get();
     }
+
+    public function top_article_vote($limit=100)
+    {
+        return $this->orderBy('vote', 'desc')
+        ->take($limit)
+        ->get();
+    }
 }
