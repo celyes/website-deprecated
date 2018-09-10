@@ -19,4 +19,12 @@ class Article extends Model
         ->take($limit)
         ->get();
     }
+
+    public function top_article_view_by_idCat($limit=100,$idCat)
+    {
+        return $this->orderBy('view', 'desc')
+        ->where('categorie_id',$idCat)
+        ->take($limit)
+        ->get();
+    }
 }
