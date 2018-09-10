@@ -44,4 +44,12 @@ class Article extends Model
         ->take($limit)
         ->get();
     }
+
+    public function top_article_vote_by_idCat($limit=100,$idCat)
+    {
+        return $this->orderBy('vote', 'desc')
+        ->where('categorie_id',$idCat)
+        ->take($limit)
+        ->get();
+    }
 }
