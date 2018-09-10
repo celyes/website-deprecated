@@ -32,4 +32,9 @@ class Article extends Model
     {
         return $this->where('keyword', 'like', '%' . $keyword . '%')->get();
     }
+
+    public function article_by_title($title)
+    {
+        return $this->where('keyword', $title)->get();
+    }
 }
