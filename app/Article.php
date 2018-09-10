@@ -27,4 +27,9 @@ class Article extends Model
         ->take($limit)
         ->get();
     }
+
+    public function article_by_keyword($keyword)
+    {
+        return $this->where('keyword', 'like', '%' . $keyword . '%')->get();
+    }
 }
