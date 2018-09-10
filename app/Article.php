@@ -12,4 +12,11 @@ class Article extends Model
         ->take($limit)
         ->get();
     }
+
+    public function top_article_view($limit=100)
+    {
+        return $this->orderBy('view', 'desc')
+        ->take($limit)
+        ->get();
+    }
 }
