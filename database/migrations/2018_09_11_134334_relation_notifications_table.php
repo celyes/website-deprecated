@@ -14,7 +14,23 @@ class RelationNotificationsTable extends Migration
     public function up()
     {
         Schema::table('notifications', function (Blueprint $table) {
-            //
+            // Create foreign keys column
+            
+            $table->integer('response_id')->unsigned();
+            $table->integer('user_id')->unsigned();
+            
+            // Relations
+            
+            $table->foreign('response_id')
+            ->references('id')
+            ->on('responses')
+            ->onDelete('cascade');
+
+            $table->foreign('user_id')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
+            
         });
     }
 
