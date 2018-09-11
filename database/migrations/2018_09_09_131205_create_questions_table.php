@@ -20,6 +20,7 @@ class CreateQuestionsTable extends Migration
             $table->string('image_link');
             $table->boolean('confirmed');
             $table->string('code');
+            $table->string('keywords');
             $table->timestamps();
         });
     }
