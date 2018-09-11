@@ -14,7 +14,16 @@ class RelationBookmarksTable extends Migration
     public function up()
     {
         Schema::table('bookmarks', function (Blueprint $table) {
-            //
+            // Set-up foreign keys
+            $table->foreign('id_article')
+            ->references('id')
+            ->on('articles')
+            ->onDelete('cascade');
+            
+            $table->foreign('id')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
         });
     }
 
