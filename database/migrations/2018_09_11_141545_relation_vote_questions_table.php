@@ -14,7 +14,17 @@ class RelationVoteQuestionsTable extends Migration
     public function up()
     {
         Schema::table('vote_questions', function (Blueprint $table) {
-            //
+            // Relations
+            $table->foreign('id')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
+
+            $table->foreign('question_id')
+            ->references('id')
+            ->on('questions')
+            ->onDelete('cascade');
+            
         });
     }
 
