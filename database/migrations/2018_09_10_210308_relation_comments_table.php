@@ -17,7 +17,13 @@ class RelationCommentsTable extends Migration
             $table->integer('article_id')->unsigned();
 
             $table->foreign('article_id')
-            ->references('id')->on('articles')
+            ->references('id')
+            ->on('articles')
+            ->onDelete('cascade');
+            
+            $table->foreign('author')
+            ->references('id')
+            ->on('users')
             ->onDelete('cascade');
         });
     }
