@@ -14,7 +14,12 @@ class RelationEventsTable extends Migration
     public function up()
     {
         Schema::table('events', function (Blueprint $table) {
-            //
+            
+            // Specify foreign keys
+            $table->foreign('id')
+            ->references('id')
+            ->on('users')
+            ->onDelete('cascade');
         });
     }
 
