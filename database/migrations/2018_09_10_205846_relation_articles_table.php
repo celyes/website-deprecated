@@ -16,7 +16,6 @@ class RelationArticlesTable extends Migration
         Schema::table('articles', function (Blueprint $table) {
             $table->integer('categorie_id')->unsigned();
             $table->integer('user_id')->unsigned();
-
             $table->foreign('categorie_id')
             ->references('id')->on('categories')
             ->onDelete('cascade');
