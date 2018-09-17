@@ -15,7 +15,8 @@ class RelationCommentsTable extends Migration
     {
         Schema::table('comments', function (Blueprint $table) {
             $table->integer('article_id')->unsigned();
-
+            $table->integer('author')->unsigned();
+            
             $table->foreign('article_id')
             ->references('id')
             ->on('articles')

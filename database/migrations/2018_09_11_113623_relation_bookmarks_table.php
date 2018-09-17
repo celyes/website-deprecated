@@ -17,10 +17,9 @@ class RelationBookmarksTable extends Migration
             // Set-up foreign keys
             $table->foreign('id_article')
             ->references('id')
-            ->on('articles')
-            ->onDelete('cascade');
+            ->on('articles');
             
-            $table->foreign('id')
+            $table->foreign('id_user')
             ->references('id')
             ->on('users')
             ->onDelete('cascade');

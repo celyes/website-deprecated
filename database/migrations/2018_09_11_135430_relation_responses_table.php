@@ -20,12 +20,12 @@ class RelationResponsesTable extends Migration
             $table->integer('user_id')->unsigned();
             // Relation
             $table->foreign('question_id')
-            ->references()
-            ->on()
+            ->references('id')
+            ->on('questions')
             ->onDelete('cascade');
             
             $table->foreign('document_id')
-            ->references('id')
+            ->references('id_doc')
             ->on('documents')
             ->onDelete('cascade');
             

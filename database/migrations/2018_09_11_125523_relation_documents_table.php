@@ -17,7 +17,7 @@ class RelationDocumentsTable extends Migration
             
             // Create foreign key columns 
             
-            $table->intger('category_id')->unsigned();
+            $table->integer('category_id')->unsigned();
             $table->integer('author_id')->unsigned();
             
             // Relations
