@@ -35,4 +35,10 @@ class Question extends Model
         ->take($limit)
         ->get();
     }
+
+    public function addView(){
+        $this->view = $this->view + 1 ;
+        $this->save();
+        return true;
+      }
 }
