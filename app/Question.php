@@ -54,4 +54,20 @@ class Question extends Model
         ->where('user_id',$idUser)
         ->get();
       }
+
+      public function question_confirmed($confirmed=TRUE)
+      {
+        if ($confirmed == TRUE)
+        {
+            return $this->orderBy('created_at', 'desc')
+            ->where('confirmed',1)
+            ->get();
+        }
+        else
+        {
+            return $this->orderBy('created_at', 'desc')
+            ->where('confirmed',0)
+            ->get();
+        }
+      }
 }
