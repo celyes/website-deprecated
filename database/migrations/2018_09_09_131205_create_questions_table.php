@@ -25,6 +25,7 @@ class CreateQuestionsTable extends Migration
             $table->boolean('confirmed');
             $table->string('code');
             $table->string('keywords');
+            $table->integer('view');
             $table->timestamps();
         });
     }
