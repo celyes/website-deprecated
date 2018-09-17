@@ -70,4 +70,11 @@ class Question extends Model
             ->get();
         }
       }
+
+      public function confirmed()
+      {
+        $this->confirmed = 1 ;
+        $this->save();
+        return true;
+      }
 }
