@@ -20,4 +20,11 @@ class Question extends Model
         ->take($limit)
         ->get();
     }
+
+    public function top_question_vote($limit=100)
+    {
+        return $this->orderBy('vote', 'desc')
+        ->take($limit)
+        ->get();
+    }
 }
