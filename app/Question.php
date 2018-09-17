@@ -27,4 +27,12 @@ class Question extends Model
         ->take($limit)
         ->get();
     }
+
+    public function top_question_vote_by_idCat($limit=100,$idCat)
+    {
+        return $this->orderBy('vote', 'desc')
+        ->where('categorie_id',$idCat)
+        ->take($limit)
+        ->get();
+    }
 }
