@@ -47,4 +47,11 @@ class Question extends Model
         $this->save();
         return true;
       }
+
+      public function question_vote_by_idUser($idUser)
+      {
+        return $this->orderBy('vote', 'desc')
+        ->where('user_id',$idUser)
+        ->get();
+      }
 }
