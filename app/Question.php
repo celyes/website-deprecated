@@ -36,8 +36,14 @@ class Question extends Model
         ->get();
     }
 
-    public function addView(){
+    public function add_view(){
         $this->view = $this->view + 1 ;
+        $this->save();
+        return true;
+      }
+
+      public function add_vote(){
+        $this->vote = $this->vote + 1 ;
         $this->save();
         return true;
       }
