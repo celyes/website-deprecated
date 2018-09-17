@@ -12,4 +12,11 @@ class Event extends Model
         ->take($limit)
         ->get();
     }
+
+    public function event_by_date($date)
+    {
+        return $this->orderBy('created_at', 'desc')
+        ->whereDate('time_of_event', $date)
+        ->get();
+    }
 }
