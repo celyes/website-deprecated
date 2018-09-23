@@ -13,6 +13,8 @@ Simple project showing how Laravel works with Vue.js.
 - Run __php artisan migrate__
 - Run __npm install__ Or __yarn install__
 - Run __npm run dev__
+
+- Run __php artisan serve__
 - That's it - you can load the homepage at __localhost:8000__
 
 ---
