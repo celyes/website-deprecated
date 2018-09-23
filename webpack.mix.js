@@ -33,7 +33,7 @@ mix
         jquery: ['$', 'jQuery', 'jquery', 'window.jQuery'],
         'popper.js/dist/umd/popper.js': ['Popper']
     })
-    .extract(['jquery', 'popper.js', 'bootstrap'])
+    // .extract(['jquery', 'popper.js', 'bootstrap']) // needs to be configured properly!
     .options({
         processCssUrls: false
     });
