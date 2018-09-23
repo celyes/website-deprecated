@@ -1,6 +1,9 @@
 /node_modules
-/public/hot
-/public/storage
+#/public/hot
+#/public/storage
+
+#ignore changes during development
+/public 
 /storage/*.key
 /vendor
 /.idea
