@@ -4,7 +4,31 @@ import Grid from '@material-ui/core/Grid'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
 
-const styles = theme => ({})
+const styles = theme => ({
+    sidebarAboutBox: {
+      padding: theme.spacing.unit * 2,
+      backgroundColor: theme.palette.grey[200],
+    },
+    sidebarSection: {
+      marginTop: theme.spacing.unit * 3,
+    },
+})
+
+const archives = [
+    'March 2020',
+    'February 2020',
+    'January 2020',
+    'December 2019',
+    'November 2019',
+    'October 2019',
+    'September 2019',
+    'August 2019',
+    'July 2019',
+    'June 2019',
+    'May 2019',
+    'April 2019',
+  ];
+  
 
 const social = ['GitHub', 'Twitter', 'Facebook']
 
@@ -39,4 +63,4 @@ class Sidebar extends Component {
     }
 }
 
-export default withStyles(styles)(Sidebar)
+export default withStyles(styles, {withTheme: true})(Sidebar)
