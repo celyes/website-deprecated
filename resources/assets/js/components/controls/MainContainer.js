@@ -10,10 +10,8 @@ class MainContainer extends Component {
     render() {
         const {classes, children} = this.props
         return (
-            <main className={classes.container}>
-                <Paper elevation={4}>
-                    {children}
-                </Paper>
+            <main>
+                {children}
             </main>
         )
     }
