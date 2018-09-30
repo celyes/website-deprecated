@@ -23,6 +23,9 @@ const styles = theme => ({
         paddingRight: 0,
       },
     },
+    mainGrid: {
+      marginTop: theme.spacing.unit * 3,
+    },
     card: {
       display: 'flex',
     },
@@ -114,4 +117,4 @@ class Home extends Component {
         )
     }
 }
-export default withStyles(styles)(Home)
+export default withStyles(styles, {withTheme: true})(Home)
