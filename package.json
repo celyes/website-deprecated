@@ -11,12 +11,13 @@
     },
     "devDependencies": {
         "axios": "^0.18",
-        "bootstrap": "^4.0.0",
+        "babel-preset-react": "^6.24.1",
         "cross-env": "^5.1",
-        "jquery": "^3.2",
         "laravel-mix": "^2.0",
-        "lodash": "^4.17.5",
-        "popper.js": "^1.12",
-        "vue": "^2.5.7"
+        "react": "^15.5.4",
+        "react-dom": "^15.5.4",
+        "react-hot-loader": "^4.3.8",
+        "webpack": "3.*",
+        "webpack-dev-server": "2.*"
     }
 }
