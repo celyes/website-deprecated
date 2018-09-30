@@ -10,13 +10,18 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
+        "@material-ui/core": "^3.1.1",
+        "@material-ui/icons": "^3.0.1",
         "axios": "^0.18",
         "babel-preset-react": "^6.24.1",
         "cross-env": "^5.1",
         "laravel-mix": "^2.0",
-        "react": "^15.5.4",
-        "react-dom": "^15.5.4",
+        "react": "^16.5.2",
+        "react-dom": "^16.5.2",
         "react-hot-loader": "^4.3.8",
+        "react-markdown-loader": "^1.1.14",
+        "react-router": "^4.3.1",
+        "react-router-dom": "^4.3.1",
         "webpack": "3.*",
         "webpack-dev-server": "2.*"
     }
