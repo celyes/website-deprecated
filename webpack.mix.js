@@ -24,46 +24,20 @@ mix.react('resources/assets/js/index.js', 'js')
     .sass('resources/assets/sass/app.scss', 'css')
 
 mix.webpackConfig({
-    output: {
-        publicPath: "https://localhost:8000/public"
-    },
-    devServer: {
-        hot: true, // this enables hot reload
-        inline: true, // use inline method for hmr
-    contentBase: path.join(__dirname, "public"),
-    https: true, //true
-    port: 8080,
-    headers: { "Access-Control-Allow-Origin": "*" },
-    watchOptions: {
-        exclude: [/bower_components/, /node_modules/]
-}
-    },
-    node: {
-    fs: "empty",
-    module: "empty"
-    },
-    });
-    // Per this issue: https://github.com/JeffreyWay/laravel-mix/issues/1483
-    
-    Mix.listen("configReady", webpackConfig => {
-    if (Mix.isUsing("hmr")) {
-    // Remove leading '/' from entry keys
-    webpackConfig.entry = Object.keys(webpackConfig.entry).reduce(
-    (entries, entry) => {
-    entries[entry.replace(/^\//, "")] = webpackConfig.entry[entry];
-    // }
-    console.log(entries);
-    return entries;
-    },
-    {}
-    );
-    // Remove leading '/' from ExtractTextPlugin instances
-    webpackConfig.plugins.forEach(plugin => {
-    if (plugin.constructor.name === "ExtractTextPlugin") {
-    console.log(plugin.filename);
-    plugin.filename = plugin.filename.replace(/^\//, "");
-    console.log(plugin.filename);
-    }
-    });
-    }
+    module: {
+        rules: [{
+            test: /\.md$/,
+            use: [
+                {
+                    loader: "html-loader"
+                },
+                {
+                    loader: "markdown-loader",
+                    options: {
+                        /* your options here */
+                    }
+                }
+            ]
+        }]
+      }
 });
