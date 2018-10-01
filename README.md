@@ -1,6 +1,6 @@
-## Code club website using Laravel, vue.js
+## Code club website using Laravel, ~~vue.js~~ React
 
-Simple project showing how Laravel works with Vue.js.
+Simple project showing how Laravel works with ~~Vue.js.~~ __React.__
 
 ---
 
